@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription – Hyrox Solidaire Octobre Rose</title>
+  <link rel="icon" type="image/svg+xml" href="ruban.svg">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header>
+    <nav>
+      <a class="logo" href="index.html"><img src="ruban.svg" alt="" class="logo-ruban"><span>Hyrox <em>Solidaire</em></span></a>
+      <ul>
+        <li><a href="index.html">Présentation</a></li>
+        <li><a href="evenement.html">L'événement</a></li>
+        <li><a href="programme.html">Programme</a></li>
+        <li><a href="lieu.html">Le lieu</a></li>
+        <li><a href="blog.html">Blog</a></li>
+        <li><a href="inscription.html" class="actif">Inscription</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <div class="hero">
+    <span class="badge">24 octobre 2026 · Grand Palais, Paris</span>
+    <h1>Je m'inscris</h1>
+    <p>Rejoignez-nous pour une journée de sport et de solidarité en faveur de la lutte contre le cancer du sein.</p>
+  </div>
+
+  <main>
+
+    <section id="infos-inscription">
+      <h2>Avant de vous inscrire</h2>
+      <div class="grille">
+        <div class="carte">
+          <h3>📅 Date</h3>
+          <p>Samedi 24 octobre 2026, accueil dès 9h00.</p>
+        </div>
+        <div class="carte">
+          <h3>📍 Lieu</h3>
+          <p>Grand Palais, Paris 8<sup>e</sup>. <a href="lieu.html">Voir le plan d'accès</a>.</p>
+        </div>
+        <div class="carte">
+          <h3>💗 Tarif</h3>
+          <p><em>Montant à compléter</em> par participant, reversé à une association de lutte contre le cancer du sein.</p>
+        </div>
+      </div>
+    </section>
+
+    <section id="formulaire-section">
+      <h2>Formulaire d'inscription</h2>
+
+      <form id="formulaire" class="formulaire" novalidate>
+
+        <div class="ligne">
+          <div class="champ">
+            <label for="prenom">Prénom *</label>
+            <input type="text" id="prenom" name="prenom" required autocomplete="given-name">
+          </div>
+          <div class="champ">
+            <label for="nom">Nom *</label>
+            <input type="text" id="nom" name="nom" required autocomplete="family-name">
+          </div>
+        </div>
+
+        <div class="ligne">
+          <div class="champ">
+            <label for="email">Adresse e-mail *</label>
+            <input type="email" id="email" name="email" required autocomplete="email">
+          </div>
+          <div class="champ">
+            <label for="tel">Téléphone</label>
+            <input type="tel" id="tel" name="tel" autocomplete="tel">
+          </div>
+        </div>
+
+        <div class="ligne">
+          <div class="champ">
+            <label for="naissance">Date de naissance *</label>
+            <input type="date" id="naissance" name="naissance" required>
+          </div>
+          <div class="champ">
+            <label for="tshirt">Taille du t-shirt *</label>
+            <select id="tshirt" name="tshirt" required>
+              <option value="">Choisir…</option>
+              <option>XS</option>
+              <option>S</option>
+              <option>M</option>
+              <option>L</option>
+              <option>XL</option>
+              <option>XXL</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="ligne">
+          <div class="champ">
+            <label for="format">Format de participation *</label>
+            <select id="format" name="format" required>
+              <option value="">Choisir…</option>
+              <option>Solo</option>
+              <option>Duo</option>
+              <option>Relais</option>
+              <option>Supporter (sans courir)</option>
+            </select>
+          </div>
+          <div class="champ">
+            <label for="niveau">Niveau *</label>
+            <select id="niveau" name="niveau" required>
+              <option value="">Choisir…</option>
+              <option>Débutant</option>
+              <option>Intermédiaire</option>
+              <option>Confirmé</option>
+            </select>
+          </div>
+        </div>
+
+        <div class="champ">
+          <label for="equipe">Nom de l'équipe / du partenaire (duo ou relais)</label>
+          <input type="text" id="equipe" name="equipe">
+        </div>
+
+        <div class="champ">
+          <label for="message">Message ou besoin particulier (santé, accessibilité…)</label>
+          <textarea id="message" name="message" rows="4"></textarea>
+        </div>
+
+        <label class="case">
+          <input type="checkbox" id="certificat" name="certificat" required>
+          <span>Je certifie être apte à la pratique d'une activité sportive intense. *</span>
+        </label>
+
+        <label class="case">
+          <input type="checkbox" id="reglement" name="reglement" required>
+          <span>J'accepte le règlement de l'événement et l'utilisation de mes données pour l'organisation de la journée. *</span>
+        </label>
+
+        <p class="erreur" id="erreur" role="alert" hidden>Merci de remplir tous les champs obligatoires (*) avant de continuer.</p>
+
+        <button type="submit" class="bouton">Envoyer mon inscription</button>
+      </form>
+
+      <div class="confirmation" id="confirmation" hidden>
+        <h3>Merci pour votre inscription ! 💗</h3>
+        <p>Votre application de messagerie vient de s'ouvrir avec votre demande d'inscription pré-remplie. Il ne vous reste qu'à l'envoyer.</p>
+        <p>Rendez-vous le <strong>24 octobre 2026 au Grand Palais</strong> !</p>
+      </div>
+    </section>
+
+  </main>
+
+  <footer>
+    <img src="ruban.svg" alt="" class="ruban-pied">
+    <p><strong>Hyrox Solidaire – Octobre Rose</strong> · Projet étudiant · Université (à compléter)</p>
+  </footer>
+
+  <script>
+    // Adresse qui recevra les inscriptions : à remplacer par la vôtre
+    var EMAIL_ORGANISATEUR = "prenom.nom@universite.fr";
+
+    var form = document.getElementById("formulaire");
+    var erreur = document.getElementById("erreur");
+    var confirmation = document.getElementById("confirmation");
+
+    form.addEventListener("submit", function (e) {
+      e.preventDefault();
+
+      if (!form.checkValidity()) {
+        erreur.hidden = false;
+        form.reportValidity();
+        return;
+      }
+      erreur.hidden = true;
+
+      var d = new FormData(form);
+      var corps =
+        "Inscription Hyrox Solidaire - 24 octobre 2026\n\n" +
+        "Prénom : " + d.get("prenom") + "\n" +
+        "Nom : " + d.get("nom") + "\n" +
+        "E-mail : " + d.get("email") + "\n" +
+        "Téléphone : " + (d.get("tel") || "-") + "\n" +
+        "Date de naissance : " + d.get("naissance") + "\n" +
+        "Taille t-shirt : " + d.get("tshirt") + "\n" +
+        "Format : " + d.get("format") + "\n" +
+        "Niveau : " + d.get("niveau") + "\n" +
+        "Équipe / partenaire : " + (d.get("equipe") || "-") + "\n" +
+        "Message : " + (d.get("message") || "-") + "\n";
+
+      var lien =
+        "mailto:" + EMAIL_ORGANISATEUR +
+        "?subject=" + encodeURIComponent("Inscription Hyrox Solidaire - " + d.get("prenom") + " " + d.get("nom")) +
+        "&body=" + encodeURIComponent(corps);
+
+      window.location.href = lien;
+      form.hidden = true;
+      confirmation.hidden = false;
+    });
+  </script>
+
+</body>
+</html>
